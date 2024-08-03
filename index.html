@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://hqmultimedia.github.io/hq-web-project/">
+    <title>Web Portfolio</title>
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- fontawesome 6.0 -->
+    <link rel="stylesheet" href="library/fontawesome/css/all.min.css">
+
+
+
+    <!-- A.HQ-css-plugin -->
+    <link rel="stylesheet" href="library/hq-multimedia-plugin/hq-css/hqcss-ver-1.9.css">
+
+    <!-- B.Vendor-Library -->
+    <!-- B1.W3-Css -->
+    <link rel="stylesheet" href="library/w3css/w3.css">
+
+
+    <!--B2.Bootstrap 5 W3School -->
+    <link rel="stylesheet" href="library/bootstrap-w3schools.com/css/bootstrap-5.min.css">
+
+    <script src="library/bootstrap-w3schools.com/js/jquery.min.js"></script>
+
+
+    <script src="library/bootstrap-w3schools.com/js/popper.min.js"></script>
+
+    <script src="library/bootstrap-w3schools.com/js/bootstrap.min.js"></script>
+
+
+    <!-- OWL Slider -->
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- isotop(mansory) -->
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="vendor/fancybox_3/lib/jquery.mousewheel.pack.js"></script>
+    <script type="text/javascript" src="vendor/fancybox_3/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox_3/source/jquery.fancybox.css" media="screen" />
+
+
+    <!-- video -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist-edit-by-user.css">
+    <link rel="stylesheet" href="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/normalize.min.css">
+    <!--end video -->
+
+
+
+
+    <!-- B3.AngularJS -->
+    <script src="library/angular-file-upload-master/js/angular1.5.5.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-animate.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-aria.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-messages.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-material.min.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-route-1.5.5.js"></script>
+    <script src="library/angular-file-upload-master/js/dirPagination.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-cookies.js"></script>
+    <script src="library/angular-file-upload-master/js/angular-sanitize.js"></script>
+
+    <!--   <link rel="stylesheet" href="../../Angular2026/angular-file-upload-master/css/angular-material.min.css"> -->
+    <!-- Angular HQMultimedia template -->
+
+    <!-- Function AngularJS Template -->
+    <script src="js-angularJs/general-ingredients/setup.js "></script>
+    <script src="js-angularJs/general-ingredients/AngularRoute.js "></script>
+    <script src="js-angularJs/general-ingredients/Data.js "></script>
+    <script src="library/angular-file-upload-master/js/ng-directive/ng-directive.js "></script>
+
+    <script src="library/angular-file-upload-master/js/hq-toast/HQ-Toast-Messenger.js "></script>
+
+
+    <!-- End function AngularJS Template -->
+    <!-- Page angularjs -->
+    <script src="js-angularJs/page/home-index.js"></script>
+    <!--  -->
+    <!-- End page angularjs -->
+
+
+
+
+
+    <!-- B4.Tags input -->
+    <!-- tags input -->
+    <link rel="stylesheet" href="vendor/tags-bootstrap-input/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="vendor/tags-bootstrap-input/css/tags-bootstrap.css">
+    <!-- tags input -->
+    <script src="vendor/tags-bootstrap-input/js/bootstrap-tagsinput.min.js"></script>
+
+
+    <!-- Thư viện animate -->
+    <link rel="stylesheet" href="vendor/animate/animate.min.css">
+    <!-- bootstrap 5 -->
+
+    <style>
+        .load__img {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99999;
+            background-color: #191919;
+        }
+    </style>
+    <style>
+        .owl-carousel {
+            overflow: hidden;
+        }
+        
+        .owl-nav {
+            margin: 0 !important;
+        }
+        
+        .owl-dots {
+            display: none !important;
+        }
+        
+        .owl-nav {
+            position: absolute;
+            /* background-color: antiquewhite; */
+            top: 50%;
+            transform: translateY(calc(-50% - 50px)) translateX(-50%);
+            left: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        button.owl-next,
+        button.owl-prev {
+            width: 39px !important;
+            height: 39px !important;
+            border-radius: 50% !important;
+            background-color: #f1f1f173 !important;
+            color: #00000094 !important;
+            font-size: 20px !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding-bottom: 7px !important;
+            transition: 0.5s !important;
+        }
+        
+        button:focus {
+            outline: none;
+        }
+        
+        button.owl-next:hover,
+        button.owl-prev:hover {
+            background-color: #797979 !important;
+            transition: 0.5s !important;
+        }
+        
+        @media (min-width:320px) and (max-width:1065px) {
+            button.owl-next {
+                margin-right: 15px !important;
+            }
+            button.owl-prev {
+                margin-left: 42px !important;
+            }
+        }
+        
+        button.owl-next {
+            margin-right: 15px !important;
+        }
+    </style>
+
+    <style>
+        /* phần box background global */
+        
+        .background-box,
+        .background-box-2 {
+            background-color: #00000069;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.4s;
+        }
+        
+        .background-box.show,
+        .background-box-2.show {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.4s;
+        }
+        /* end phần box background global */
+        /* phần box yêu thích */
+        
+        .box-heart {
+            width: 339px;
+            height: 100vh;
+            overflow: scroll;
+            background-color: azure;
+            color: #302d2d;
+            font-weight: 500;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 102;
+            box-shadow: 0 2px 3px rgb(0 0 0 / 4%);
+            /* opacity: 0; */
+            visibility: hidden;
+            transform: translateX(100%);
+            transition: 0.4s;
+        }
+        
+        .box-heart.show {
+            transform: translateX(0);
+            /* opacity: 1; */
+            visibility: visible;
+            transition: 0.4s;
+        }
+        
+        .one-notification-heart {
+            display: flex;
+            margin: 10px 0;
+            border-bottom: 1px solid #80808021;
+            /* padding-bottom: 10px; */
+            padding: 10px;
+        }
+        
+        .content-notification-heart {
+            width: calc(100% - 70px - 20px);
+            padding-left: 15px;
+        }
+        
+        a .img-data-heart {
+            width: 86px;
+            height: 102px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 5px;
+        }
+        
+        .content-notification-heart p:nth-child(1) {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .content-notification-heart p:nth-child(2) {
+            font-size: 12px;
+        }
+        
+        .delete-favorite {
+            padding: 6px;
+            color: white;
+            font-size: 13px;
+            width: 139px;
+            text-align: center;
+            margin-top: 6px;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: #191919;
+            transition: 0.4s;
+        }
+        
+        .delete-favorite:hover {
+            background-color: brown;
+            transition: 0.4s;
+        }
+        /* End phần box yêu thích */
+        /* box-contact */
+        
+        .box-contact {
+            position: fixed;
+            width: 392px;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background-color: #323131;
+            color: white;
+            z-index: 99;
+            padding: 10px;
+            transition: 1s;
+            transform: translateX(100%);
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        .icon-close-box-contact {
+            font-size: 23px;
+            cursor: pointer;
+            padding-right: 10px;
+            transition: 0.4s;
+        }
+        
+        .icon-close-box-contact:hover {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+        
+        .box-contact.show {
+            transform: translateX(0);
+            visibility: visible;
+            transition: 1s;
+        }
+        
+        @keyframes translateLeft {
+            0% {
+                transform: translateX(0);
+                /* animation-timing-function: cubic-bezier(.175, .885, .32, 1) */
+            }
+            100% {
+                transform: translateX(-392px);
+                /* animation-timing-function: cubic-bezier(.175, .885, .32, 1) */
+            }
+        }
+        
+        .translate-left {
+            animation-name: translateLeft;
+        }
+        
+        @keyframes translateinitial {
+            0% {
+                transform: translateX(-392px);
+                /* animation-timing-function: cubic-bezier(.175, .885, .32, 1) */
+            }
+            100% {
+                transform: translateX(0);
+                /* animation-timing-function: cubic-bezier(.175, .885, .32, 1) */
+            }
+        }
+        
+        .translate-initial {
+            animation-name: translateinitial;
+        }
+        
+        .logo-box-contact {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .logo-box-contact img {
+            height: 68px;
+        }
+        
+        .text-box-contact {
+            color: #a39595;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .img-box-contact {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .img-box-contact img {
+            height: 200px;
+            width: 95%;
+            object-fit: cover;
+            margin: 15px 0 15px 0;
+            object-position: top;
+        }
+        
+        .box-menu-contact {
+            margin: 10px 0;
+        }
+        
+        .box-menu-contact ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box-menu-contact ul li {
+            padding: 0px 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .box-icon-contact {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box-icon-contact i {
+            padding: 8px;
+            font-size: 21px;
+        }
+        /*End box-contact */
+        
+        @media (min-width:320px) and (max-width:400px) {
+            .box-heart {
+                width: 95%;
+            }
+        }
+    </style>
+    <style>
+        .box-content-posts {
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 69px;
+            margin-top: 39px;
+        }
+        /* phần left */
+        
+        .box-left-content-posts {
+            width: 70%;
+        }
+        
+        p.title-posts {
+            color: gray;
+            font-size: 14px;
+        }
+        
+        h5.category-posts {
+            margin: 15px 0;
+            font-size: 22px;
+        }
+        
+        p.text-content-posts {
+            margin: 15px 0;
+            color: gray;
+        }
+        
+        img.img-left-posts-content {
+            width: 100%;
+            margin: 15px 0;
+        }
+        
+        .text-hightlight {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .text-hightlight>i {
+            font-size: 95px;
+            padding-right: 10px;
+            color: gray;
+        }
+        
+        .text-hightlight>H6 {
+            font-size: 22px;
+        }
+        
+        .box-tag-icon-posts {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #8080803d;
+            padding-bottom: 15px;
+        }
+        
+        .box-posts-tag {
+            display: flex;
+            align-items: center;
+            width: calc(100% - 150px);
+        }
+        
+        .tags-posts {
+            padding-right: 5px;
+            padding-bottom: 2px;
+        }
+        
+        .tag-item>a {
+            padding-right: 12px;
+            font-weight: 500;
+            color: gray;
+        }
+        
+        .box-posts-icon-share {
+            display: flex;
+            justify-content: flex-end;
+            width: 150px;
+        }
+        
+        .box-posts-icon-share>a>i {
+            font-size: 19px;
+            padding-right: 10px;
+            color: gray;
+        }
+        
+        .box-related-posts {
+            display: flex;
+            flex-wrap: wrap;
+            --spacing: 25px;
+            --columns: 4;
+            margin-left: calc(-1 * var(--spacing));
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .box-related-posts>a {
+            width: calc(calc(100% / var(--columns)) - var(--spacing));
+            margin-left: var(--spacing);
+        }
+        
+        img.img-related-posts {
+            width: 100%;
+            /* border-radius: 4px; */
+        }
+        
+        .one-comment {
+            display: flex;
+            margin: 15px 0 0 0;
+            border-bottom: 1px solid #80808036;
+            padding-bottom: 15px;
+        }
+        
+        .user-comment {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .user-comment img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .content-comment {
+            width: calc(100% - 68px);
+            padding-left: 15px;
+        }
+        
+        .content-comment H6 {
+            font-size: 18px;
+        }
+        
+        .content-comment p:nth-child(2) {
+            color: #5a5757;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .content-comment p:nth-child(3) {
+            color: gray;
+            font-size: 15px;
+        }
+        
+        .title-box-comment {
+            border-top: 1px solid #80808036;
+            border-bottom: 1px solid #80808036;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        
+        .input-comment textarea {
+            overflow: auto;
+            width: 100%;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            color: #868686;
+            padding: 10px;
+            font-size: 14px;
+            margin: 15px 0 5px 0;
+        }
+        
+        textarea:focus-visible {
+            outline: none;
+        }
+        
+        .button-send-comment {
+            color: #fff;
+            margin: 10px 0 10px 0;
+        }
+        /* phần right */
+        
+        .box-right-content-posts {
+            width: 30%;
+            text-align: center;
+            padding-left: 20px;
+        }
+        
+        img.img-author {
+            width: 168px;
+            height: 168px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 19px 0;
+        }
+        
+        .box-icon-box-author i {
+            font-size: 18px;
+            padding: 5px;
+            color: gray;
+        }
+        
+        .box-icon-box-author {
+            margin: 15px 0;
+        }
+        
+        .box-icon-box-author i {
+            font-size: 18px;
+            padding: 5px;
+            color: gray;
+        }
+        
+        .box-latest-posts {
+            border-top: 1px solid #80808036;
+            border-bottom: 1px solid #80808036;
+            padding: 30px 0 10px 0;
+        }
+        
+        .one-latest-posts {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .one-latest-posts h6 {
+            color: gray;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .one-latest-posts p {
+            color: #a59b9b;
+        }
+        /* box banner */
+        
+        .box-baner {
+            /* border-top: 1px solid #80808036; */
+            margin: 30px 0 30px 0;
+        }
+        
+        .box-baner a img {
+            width: 91%;
+            margin-bottom: 30px;
+        }
+        /* .box-baner a:last-child {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 99px px;
+    } */
+        /* end box banner */
+        /* responsive */
+        
+        @media (max-width:1024px) {
+            .box-right-content-posts {
+                width: 100%;
+                padding-left: 0 !important;
+                margin-top: 15px;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+            .box-author {
+                margin-top: 20px;
+            }
+            .author-description {
+                padding: 0 30px 0 30px;
+            }
+            .box-baner {
+                margin: auto;
+                width: 56%;
+                padding-top: 30px;
+            }
+            /* Bottom */
+            .box-left-content-posts {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width:543px) {
+            .box-content-posts {
+                padding: 0 15px;
+            }
+            .box-baner {
+                margin: auto;
+                width: 91%;
+            }
+        }
+    </style>
+
+    <style>
+        .background-change-page {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: #191919;
+            z-index: 999;
+            display: none;
+        }
+        
+        .background-change-page.effect {
+            animation-name: flash;
+            display: block;
+        }
+        
+        @keyframes flash {
+            0% {
+                opacity: 0
+            }
+            100% {
+                opacity: 1;
+                animation-duration: 1s;
+            }
+        }
+    </style>
+    <style>
+        .ul-filter {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .ul-filter>li {
+            margin-right: 10px;
+            border-right: 1px solid #dbdada;
+            padding-right: 10px;
+            transition: 0.4s;
+        }
+        
+        .ul-filter li:hover {
+            color: burlywood;
+            transition: 0.4s;
+        }
+        
+        @media (min-width:320px) and (max-width:543px) {
+            .ul-filter>li {
+                margin-right: 0;
+                border-right: none;
+                padding-right: 0;
+                transition: 0.4s;
+                width: 100%;
+                margin-top: 5px;
+            }
+            .block-top {
+                height: auto !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body style="font-size: 15px !important;" ng-app="myApp" ng-controller="Load_Data_Controller" class="theme-2 interface-basic font-3 ">
+
+    <div class="load">
+        <div class="load__img flex-align-middle">
+            <img src="source-data/loading.gif" width="100px" alt="">
+        </div>
+    </div>
+
+
+    <!-- <div ng-view></div> -->
+    <!-- Menu -->
+    <div class="box-menu translate_Class" ng-include="'content-admin-panel/general-ingredients/view-menu/menu-home.html'" scope="" onload="">
+
+    </div>
+    <!-- End menu -->
+
+
+    <div class="background-change-page">
+        <div class="load__img flex-align-middle">
+            <img src="source-data/loading.gif" width="100px" alt="">
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div ng-show="posts_mansory">
+
+        <!-- block top -->
+        <div class="block-top">
+            <div class="block-top-left">
+                <H6>WEB PORTFOLIO </H6>
+            </div>
+            <div class="block-top-right">
+
+            </div>
+        </div>
+        <!-- End block top -->
+
+
+
+
+        <!-- box mansory-->
+        <div class="content_mansory padding-tb-30 ">
+
+            <!-- bar -->
+
+            <div class=" box_image ">
+                <a target="_blank" href="https://hqmultimedia.github.io/web-app-admin">
+                    <img src="source-data/web-preview/project-admin-preview.jpg" width="100%" alt="">
+                </a>
+                <a target="_blank" href="https://hqmultimedia.github.io/web-app-admin">
+                    <H6 class="uppercase ">
+                        Web App Admin
+                    </H6>
+
+                </a>
+                <b class="margin-t-15 block">3 giao diện trải nghiệm : <u>Active,elastic,horizontal</u></b>
+                <p class="margin-t-5">-Ở màn hình > 991px (tablet,pc) có thể tuỳ chọn giữa giao diện và sẽ lưu tuỳ chọn cho đến khi người dùng lựa chọn lại.</p>
+                <p>-Ở màn hình nhỏ hơn 991px(điện thoại...) sẽ về giao diện cơ bản.</p>
+            </div>
+            <div class=" box_image ">
+                <a target="_blank" href="https://hqmultimedia.github.io/web-information-two-layout">
+                    <img src="source-data/web-preview/infomation-two-layout.jpg" width="100%" alt="">
+                </a>
+                <a target="_blank" href="https://hqmultimedia.github.io/web-information-two-layout">
+                    <H6 class="uppercase ">
+                        Web Business Information
+                    </H6>
+
+                </a>
+                <b class="margin-t-15 block">2 giao diện trải nghiệm : <u>Left layout,Horizontal layout</u></b>
+                <p class="margin-t-5">-Ở màn hình > 1065px (tablet,pc) có thể tuỳ chọn giữa giao diện và sẽ lưu tuỳ chọn cho đến khi người dùng lựa chọn lại.</p>
+                <p>-Ở màn hình nhỏ hơn 1065px (điện thoại...) tất cả dùng chung 1 giao diện.</p>
+            </div>
+            <div class=" box_image ">
+                <a target="_blank" href="https://hqmultimedia.github.io/web-posts-layout-mansory">
+                    <img src="source-data/web-preview/project-posts-mansory-preview.jpg" width="100%" alt="">
+                </a>
+                <a target="_blank" href="https://hqmultimedia.github.io/web-posts-layout-mansory">
+                    <H6 class="uppercase ">
+                        Web Posts Mansory
+                    </H6>
+
+                </a>
+                <p class="margin-t-15">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut expedita facere libero, id aperiam, sint odit esse necessitatibus deleniti assumenda provident iusto officiis velit magnam non officia reprehenderit minus magni.</p>
+            </div>
+            <div class=" box_image ">
+                <a target="_blank" href="https://hqmultimedia.github.io/home-fashion">
+                    <img src="source-data/web-preview/project-web-shop-preview.jpg" width="100%" alt="">
+                </a>
+                <a target="_blank" href="https://hqmultimedia.github.io/home-fashion">
+                    <H6 class="uppercase ">
+                        Web Home Fashion
+                    </H6>
+
+                </a>
+                <p class="margin-t-15">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut expedita facere libero, id aperiam, sint odit esse necessitatibus deleniti assumenda provident iusto officiis velit magnam non officia reprehenderit minus magni.</p>
+            </div>
+            <div class=" box_image ">
+                <a target="_blank" href="https://hqmultimedia.github.io/web-blog-two-layout">
+                    <img src="source-data/web-preview/two-theme.jpg" width="100%" alt="">
+                </a>
+                <a target="_blank" href="https://hqmultimedia.github.io/web-blog-two-layout">
+                    <H6 class="uppercase ">
+                        Web Posts Two Layout
+                    </H6>
+
+                </a>
+                <b class="margin-t-15 block">2 giao diện trải nghiệm : <u>Left layout,Horizontal layout</u></b>
+                <p class="margin-t-5">-Ở màn hình > 1065px (tablet,pc) có thể tuỳ chọn giữa giao diện và sẽ lưu tuỳ chọn cho đến khi người dùng lựa chọn lại.</p>
+                <p>-Ở màn hình nhỏ hơn 1065px (điện thoại...) tất cả dùng chung 1 giao diện.</p>
+            </div>
+
+
+
+
+
+
+        </div>
+        <!-- End box mansory -->
+    </div>
+
+    <!-- END CONTENT -->
+
+
+
+    <!-- FOOTER -->
+    <footer class="translate_Class " ng-include=" 'content-admin-panel/general-ingredients/view-footer/footer.html' " scope=" " onload=" ">
+
+    </footer>
+    <!-- END FOOTER -->
+
+
+</body>
+<!-- Ck editor -->
+<script src="library/ckeditor/ckeditor/ckeditor.js "></script>
+<script src="library/ckeditor/ckfinder/ckfinder.js "></script>
+<!-- End Ck editor -->
+
+<!-- HQ template -->
+<link rel="stylesheet " href="css/controller-css-element-global.css ">
+<link rel="stylesheet " href="css/controller-css-page.css ">
+<link rel="stylesheet " href="css/style-global.css ">
+<!--  -->
+<link rel="stylesheet " href="css/color.css ">
+<link rel="stylesheet " href="css/font.css ">
+<script src="js/menu.js "></script>
+<!-- HQ-js-plugin -->
+<!-- 
+<link rel="stylesheet " href="library/hq-multimedia-plugin/hq-js/hq-js-ver-1.9.css ">
+<script src="library/hq-multimedia-plugin/hq-js/hq-js-ver-1.9.js "></script> -->
+<!-- HQ jquery theme project -->
+
+
+
+
+<!-- gọi hàm trong hq-jquery -->
+
+
+
+<!-- js video -->
+<script src="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/mediaelement-and-player.min.js ">
+</script>
+<script src="vendor/video-mediaelement-plugins-2.6.7/dist/playlist/playlist.js "></script>
+
+<!-- end js video -->
+
+<!-- pie chart -->
+<script src="vendor/pieChart/jquery.easypiechart.min.js "></script>
+<script src="vendor/pieChart/jquery.appear.min.js "></script>
+
+<!-- Before after js -->
+<link rel="stylesheet " href="vendor/after-before-twenty-twenty/css/twentytwenty.css ">
+
+<script src="vendor/after-before-twenty-twenty/js/jquery.event.move.js "></script>
+<script src="vendor/after-before-twenty-twenty/js/jquery.twentytwenty.js "></script>
+
+
+</html>
+
+<!-- jquery loadding -->
+<script>
+    $(window).on('load', function() {
+        $('.load').delay(1000).fadeOut('slow');
+    });
+</script>
+<!-- js menu small -->
+<script>
+    $('.menu-small-icon').click(function() {
+        $('.box-link').toggleClass('show-menu-small');
+        var header = $('.box-link');
+
+        // setTimeout(function() {
+        //     header.toggleClass('fix-height-box-link');
+        // }, 500);
+
+    });
+</script>
+<!-- end js menu small -->
+
+
+<!-- jquery carousel bootstrap -->
